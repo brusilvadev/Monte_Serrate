@@ -3,3 +3,33 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --yellow: #DEB841;
+    --gold: #DE9E36;
+    --black: #37323E;
+
+}
+header{
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    background-color: var(--black);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    padding: 10px 0 0 0 ;
+    width: 100%;
+}
+header img{
+    width: 8rem;
+}
+
+.photo{
+    width: 100%;
+    background-image: url(../img/Jesus-Crucificado.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
