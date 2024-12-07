@@ -1,35 +1,153 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
-:root{
+:root {
     --yellow: #DEB841;
     --gold: #DE9E36;
     --black: #37323E;
-
+    --wine: #921e11;
 }
-header{
+
+header {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     text-align: center;
     align-items: center;
-    background-color: var(--black);
+    background-color: white;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.75);
     position: fixed;
-    padding: 10px 0 0 0 ;
+    padding: 10px 0;
     width: 100%;
+    z-index: 999;
 }
-header img{
+
+header .link-desktop{
+    font-size: 20px;
+    
+}
+header .link-desktop:hover{
+    color: var(--wine);
+    border-radius: 8px;
+    transition:  .5s;
+}
+
+header img {
     width: 8rem;
 }
 
-.photo{
-    width: 100%;
-    background-image: url(../img/Jesus-Crucificado.png);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+.link-desktop {
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    padding: 0 10px;
+}
 
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    background-color: white;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding-top: 20px;
+}
+
+.mobile-menu .close-icon {
+    display: block;
+    font-size: 1.8rem;
+    margin: 0 auto 20px;
+    cursor: pointer;
+    color: var(--black);
+    text-align: center;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    text-align: center;
+}
+
+.mobile-menu a:hover {
+    background-color: var(--wine);
+    color: white;
+}
+
+/* Overlay */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+
+/* SECTIONS CSS */
+.saint{
+    width: 100%;
+    padding: 170px 20px 20px 20px;
+    margin: auto;
+    text-align: center;
+}
+.saint h1{
+    margin-bottom: 28px;
+}
+
+.saint-container{
+    display: flex;
+    justify-content: center;
+}
+.saint-left{
+    padding: 12px;
+    width: 50%;
+}
+.saint-left img{
+    width: 100%;
+}
+.saint-right{
+    padding: 12px;
+    width: 50%;
+    text-align: start;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .link-desktop {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+
+    .saint h1{
+        margin-bottom: 18px;
+    }
+    .saint-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .saint-left, .saint-right{
+        width: 100%;
+    }
 }
