@@ -104,9 +104,14 @@ header img {
 
 
 /* SECTIONS CSS */
+
+.empty{
+    padding: 180px 0 0 0;
+}
+
 .saint{
     width: 100%;
-    padding: 170px 20px 20px 20px;
+    margin: 40px 0px 80px 0px !important;
     margin: auto;
     text-align: center;
 }
