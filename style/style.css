@@ -15,7 +15,7 @@
 
 header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
     align-items: center;
     background-color: white;
@@ -24,6 +24,11 @@ header {
     padding: 10px 0;
     width: 100%;
     z-index: 999;
+}
+.header-left, .header-right{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 header .link-desktop{
@@ -105,13 +110,18 @@ header img {
 
 /* SECTIONS CSS */
 
-.empty{
-    padding: 180px 0 0 0;
+.banner{
+    padding: 140px 0px 0px 0px;
 }
+
+.banner-img img{
+    width: 100%;
+}
+
 
 .saint{
     width: 100%;
-    margin: 40px 0px 80px 0px !important;
+    margin: 80px 0px 80px 0px !important;
     margin: auto;
     text-align: center;
 }
@@ -136,6 +146,61 @@ header img {
     text-align: start;
 }
 
+footer{
+    padding: 20px 0px 0px 0px;
+    width: 100%;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-text{
+    width: 100%;
+    cursor: default;
+}
+.footer-text span{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: center;
+}
+.footer-links a{
+    margin: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+.footer-links a:hover{
+    color: var(--gold);
+}
+
+.footer-social{
+    display: flex;
+    justify-content: center;
+}
+.footer-social a{
+    margin: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.footer-social a:hover{
+    color: var(--gold);
+}
+
+.footer-credit{
+    background-color: #242129;
+    color: white;
+    padding: 20px 0px 20px 0px;
+    cursor: default;
+}
 /* Responsividade */
 @media (max-width: 768px) {
     .link-desktop {
